@@ -1,0 +1,6 @@
+Checkpoint compatibility: matched=101/101 model tensors, source_element_coverage=1.000000
+Fold 0: router train rows=18230, validation rows=24078
+Outer-test pair/drug/protein overlap: 0/0/0
+Metabolic held-out structure/sequence overlap: 0/0
+Stage-1 checkpoint: runs/metabolic_routed_residual_v37_raw_pretrain_fold0_20260807_020102/best_model_epoch19.ckpt
+V3.7 STAGE-2 FAIL-CLOSED PREFLIGHT OK

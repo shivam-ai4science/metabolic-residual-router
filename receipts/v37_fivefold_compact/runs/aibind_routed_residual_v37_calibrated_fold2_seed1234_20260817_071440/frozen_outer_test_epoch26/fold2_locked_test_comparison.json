@@ -1,0 +1,19 @@
+{
+  "delta_v37_vs_nature_auc_pp": 0.36486466131017137,
+  "delta_v37_vs_nature_aupr_pp": 1.4000311034519486,
+  "delta_v37_vs_reproduction_auc_pp": 0.4738646613101638,
+  "delta_v37_vs_reproduction_aupr_pp": 0.9540311034519466,
+  "delta_v37_vs_v36_auc_pp": 0.40286466131016496,
+  "delta_v37_vs_v36_aupr_pp": 0.7580311034519394,
+  "nature_auc": 0.84666,
+  "nature_aupr": 0.7958,
+  "positive_rows": 3153,
+  "reproduction_auc": 0.84557,
+  "reproduction_aupr": 0.80026,
+  "rows": 7902,
+  "v36_auc": 0.84628,
+  "v36_aupr": 0.80222,
+  "v37_auc": 0.8503086466131017,
+  "v37_aupr": 0.8098003110345194,
+  "v37_average_precision": 0.809897414708346
+}

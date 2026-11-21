@@ -1,0 +1,103 @@
+{
+  "protocol": "local-five-fold-definition-and-accepted-table-audit-v1",
+  "results_source": "results/results_five_fold.csv",
+  "results_sha256": "f35c4f8ed80d9db57788fe444d2a9ad069b4ea66afaf453d001324a4d57317df",
+  "result_folds_exact_once": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "all_status_complete": true,
+  "split_hashes": {
+    "DPI/datasets/BindingDB_AIBind/blind_start/train_set0.csv": "d72351daf38c065688cb7af6ee0bce7aab15ec1f47988397a59230ed81ad937e",
+    "DPI/datasets/BindingDB_AIBind/blind_start/val_set0.csv": "86171df257dfc53ea4b30095927c8bcce237743ea27ac7b53a1037709b8842ac",
+    "DPI/datasets/BindingDB_AIBind/blind_start/test_set0.csv": "5c93718c21ccfd247e32310182421c19d70cef261fc94815e561c1c6a17755e6",
+    "DPI/datasets/BindingDB_AIBind/blind_start/train_set1.csv": "9715d78858ff57ab700885b19ae99e40adcc4fb341647da7bf45d2ff62fb8a5d",
+    "DPI/datasets/BindingDB_AIBind/blind_start/val_set1.csv": "944b952d78e3fc105f54e7428e9fddeb5595df499982c692a6eb4a3209d9ff6e",
+    "DPI/datasets/BindingDB_AIBind/blind_start/test_set1.csv": "8c9a3e9df85e5a7ee4e45cbd01327cd6e8aa3fa471c8431b7c2b75ba55ce801d",
+    "DPI/datasets/BindingDB_AIBind/blind_start/train_set2.csv": "c480804dc04fc8471050ce8c703ecc741c532681afac312231e0d946835fd669",
+    "DPI/datasets/BindingDB_AIBind/blind_start/val_set2.csv": "ea76b031f913c4a07fe44b17a3ec2be5c9efefae20630ee2ed1774e0223e30f1",
+    "DPI/datasets/BindingDB_AIBind/blind_start/test_set2.csv": "42660039f7577e8d2c711d9e8980085cc9f7de0d6cd7253d1683a70c3561d926",
+    "DPI/datasets/BindingDB_AIBind/blind_start/train_set3.csv": "ffa967ab294e9a92c2febdacaccacedd79ef59ad08e89ecbf6548dd5f419e4c8",
+    "DPI/datasets/BindingDB_AIBind/blind_start/val_set3.csv": "3b036d0e17e7b81ab5fce6e294d544af2df7ea83e53fad326b192f21ec69a061",
+    "DPI/datasets/BindingDB_AIBind/blind_start/test_set3.csv": "179ff85d452e20204b045f6abdd20e52c4cade2c9b99ebadd408936661609e2d",
+    "DPI/datasets/BindingDB_AIBind/blind_start/train_set4.csv": "45ae1adc0cb55b62a91027bddc1af92f5405e74775eccf8a2f0bb577909ed37d",
+    "DPI/datasets/BindingDB_AIBind/blind_start/val_set4.csv": "3b966a84d183d2c15b7bbca588d3b74c97298070ec8af22ee4b6d58b54917c85",
+    "DPI/datasets/BindingDB_AIBind/blind_start/test_set4.csv": "af14a4c7116be07413fb1094266d656dcdd0ca8fdfed63d6e705373007d3dc3c"
+  },
+  "fold_audits": [
+    {
+      "fold": 0,
+      "train_rows": 18279,
+      "validation_rows": 24137,
+      "test_rows_raw_csv": 7896,
+      "test_positive_rows_raw_csv": 2933,
+      "test_rows_after_exact_triple_deduplication": 7894,
+      "duplicates_removed_by_loader_semantics": 2,
+      "test_rows_after_feature_exclusions": 7869,
+      "feature_excluded_rows_after_deduplication": 25,
+      "train_test_pair_overlap": 0,
+      "train_test_compound_overlap": 0,
+      "train_test_protein_overlap": 0
+    },
+    {
+      "fold": 1,
+      "train_rows": 17481,
+      "validation_rows": 24447,
+      "test_rows_raw_csv": 8384,
+      "test_positive_rows_raw_csv": 3390,
+      "test_rows_after_exact_triple_deduplication": 8382,
+      "duplicates_removed_by_loader_semantics": 2,
+      "test_rows_after_feature_exclusions": 8366,
+      "feature_excluded_rows_after_deduplication": 16,
+      "train_test_pair_overlap": 0,
+      "train_test_compound_overlap": 0,
+      "train_test_protein_overlap": 0
+    },
+    {
+      "fold": 2,
+      "train_rows": 18153,
+      "validation_rows": 24230,
+      "test_rows_raw_csv": 7929,
+      "test_positive_rows_raw_csv": 3173,
+      "test_rows_after_exact_triple_deduplication": 7929,
+      "duplicates_removed_by_loader_semantics": 0,
+      "test_rows_after_feature_exclusions": 7902,
+      "feature_excluded_rows_after_deduplication": 27,
+      "train_test_pair_overlap": 0,
+      "train_test_compound_overlap": 0,
+      "train_test_protein_overlap": 0
+    },
+    {
+      "fold": 3,
+      "train_rows": 17973,
+      "validation_rows": 24180,
+      "test_rows_raw_csv": 8159,
+      "test_positive_rows_raw_csv": 3239,
+      "test_rows_after_exact_triple_deduplication": 8152,
+      "duplicates_removed_by_loader_semantics": 7,
+      "test_rows_after_feature_exclusions": 8125,
+      "feature_excluded_rows_after_deduplication": 27,
+      "train_test_pair_overlap": 0,
+      "train_test_compound_overlap": 0,
+      "train_test_protein_overlap": 0
+    },
+    {
+      "fold": 4,
+      "train_rows": 18436,
+      "validation_rows": 23941,
+      "test_rows_raw_csv": 7935,
+      "test_positive_rows_raw_csv": 3011,
+      "test_rows_after_exact_triple_deduplication": 7933,
+      "duplicates_removed_by_loader_semantics": 2,
+      "test_rows_after_feature_exclusions": 7930,
+      "feature_excluded_rows_after_deduplication": 3,
+      "train_test_pair_overlap": 0,
+      "train_test_compound_overlap": 0,
+      "train_test_protein_overlap": 0
+    }
+  ],
+  "run_level_scope": "This report records the locked split-level audit. Five-fold compact run receipts, frozen predictions, and training/model-selection evidence are verified by scripts/audit_fivefold_receipts.py."
+}

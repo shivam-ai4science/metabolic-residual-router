@@ -1,0 +1,8 @@
+biotite
+jupyter
+matplotlib
+pandas
+rdkit
+requests
+torch
+tqdm

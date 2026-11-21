@@ -1,0 +1,105 @@
+experiment:
+  name: "aibind_routed_residual_v37_nested_dual_blind_fold4_seed1234"
+  mode: "finetune"
+  save_dir: "./runs"
+  seed: 1234
+
+finetune:
+  source_run: "REPLACE_WITH_V37_METABOLIC_PRETRAIN_RUN"
+  checkpoint_type: "best"
+  freeze_backbone: false
+  validate_checkpoint_keys: true
+  min_source_model_coverage: 0.999
+  required_source_prefixes:
+    - "model.lig_global_unit"
+    - "model.interaction_layer"
+    - "model.routed_ligand_global_encoder"
+    - "model.routed_ligand_token_encoder"
+    - "model.routed_protein_global_encoder"
+    - "model.routed_protein_token_encoder"
+    - "model.routed_compatibility_encoder"
+    - "model.routed_relevance"
+
+data:
+  dataset_name: "BindingDB_AIBind_router_oof_outer4_nested_dual_blind"
+  base_path: "../DPI/datasets"
+  set_type: blind_start
+  set_id: 4
+  read_on_fly: false
+  batch_size_train: 128
+  batch_size_val: 256
+  num_workers: 0
+  embeddings: "coldstartcpi"
+  max_lig_tokens: 101
+  max_prot_tokens: 1001
+  padding_mode: "official_fixed"
+  official_lig_local_tokens: 100
+  official_prot_local_tokens: 1000
+
+model:
+  name: "RoutedMetabolicResidualCPI"
+  params:
+    latent_dim: 512
+    num_heads: 4
+    dropout: 0.1
+    use_padding_mask: false
+    output_dim: 2
+    side_dim: 128
+    interaction_dim: 64
+    router_hidden_dim: 256
+    contact_dim: 64
+    topk_scale: 0.25
+    topk_min: 8
+    topk_max: 64
+    base_temperature: 1.0
+    uncertainty_temperature: 1.0
+    uncertainty_floor: 0.05
+    max_correction: 1.0
+    relevance_bias: -1.0
+    abstain_bias: 1.0
+    directional_bias: -1.0
+    expert_bias: -3.0
+    freeze_base: true
+    detach_base_features: true
+    freeze_metabolic_encoder: false
+    freeze_router: false
+
+loss:
+  name: RoutedResidualMultiTaskLoss
+  use_dynamic_weights: false
+  params:
+    label_smoothing: 0.0
+    router_weight: 0.25
+    router_gamma: 2.0
+    distill_weight: 0.25
+    correction_l1_weight: 0.01
+    activity_weight: 0.01
+    brier_weight: 0.05
+    require_oof_targets: true
+
+trainer:
+  seed: 1234
+  max_epochs: 40
+  learning_rate: 3e-4
+  weight_decay: 1e-4
+  optimizer: AdamW
+  accumulation_steps: 1
+  monitor_metric: val_score
+  monitor_mode: max
+  early_stopping_patience: 10
+  save_every_n_epochs: 5
+  layer_rates:
+    routed_ligand_global_encoder: 3e-5
+    routed_ligand_token_encoder: 3e-5
+    routed_protein_global_encoder: 3e-5
+    routed_protein_token_encoder: 3e-5
+    routed_contact_: 3e-5
+    routed_ligand_side: 3e-5
+    routed_protein_side: 3e-5
+    routed_interaction_summary: 3e-5
+    routed_compatibility_: 3e-5
+    routed_relevance: 3e-5
+
+evaluation:
+  test_after_fit: false
+  export_predictions: true

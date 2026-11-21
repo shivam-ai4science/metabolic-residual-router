@@ -1,0 +1,22 @@
+{
+  "rows": 18230,
+  "positive_rows": 7280,
+  "negative_rows": 10950,
+  "teacher_folds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "teacher_fold_count": 9,
+  "mean_teachers_per_row": 1.0,
+  "mean_teacher_std": 0.0,
+  "test_split_included": false,
+  "embedding_target": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind/embeddings",
+  "output_dir": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind_router_oof_outer0_nested_dual_blind_calibrated"
+}

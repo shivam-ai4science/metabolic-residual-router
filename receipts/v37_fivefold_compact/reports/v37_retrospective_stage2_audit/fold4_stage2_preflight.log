@@ -1,0 +1,7 @@
+Historical router test artifact: present but unloaded during fit; benchmark SHA256 matches source
+Checkpoint compatibility: matched=101/101 model tensors, source_element_coverage=1.000000
+Fold 4: router train rows=18355, validation rows=23892
+Outer-test pair/drug/protein overlap: 0/0/0
+Metabolic held-out structure/sequence overlap: 0/0
+Stage-1 checkpoint: runs/metabolic_routed_residual_v37_raw_pretrain_fold4_20260803_084301/best_model_epoch19.ckpt
+V3.7 STAGE-2 FAIL-CLOSED PREFLIGHT OK

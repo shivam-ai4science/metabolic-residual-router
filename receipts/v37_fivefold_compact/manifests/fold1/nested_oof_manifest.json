@@ -1,0 +1,165 @@
+{
+  "protocol": "outer-train-only-nested-dual-entity-blind-v1",
+  "outer_set_id": 1,
+  "outer_train_path": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind/blind_start/train_set1.csv",
+  "outer_train_sha256": "9715d78858ff57ab700885b19ae99e40adcc4fb341647da7bf45d2ff62fb8a5d",
+  "outer_raw_rows": 17481,
+  "outer_unique_rows": 17433,
+  "outer_unique_rows_before_feature_filter": 17476,
+  "embedding_filter": {
+    "excluded_drug_ids": [
+      "1167",
+      "141",
+      "2837",
+      "2957",
+      "303",
+      "3663",
+      "4612",
+      "4723",
+      "5534",
+      "6258",
+      "836"
+    ],
+    "excluded_protein_ids": [
+      "2122",
+      "901",
+      "93"
+    ]
+  },
+  "outer_val_accessed": false,
+  "outer_test_accessed": false,
+  "num_buckets": 3,
+  "teacher_count": 9,
+  "teacher_val_frac": 0.1,
+  "seed": 1234,
+  "drug_bucket_row_loads": [
+    5811,
+    5811,
+    5811
+  ],
+  "protein_bucket_row_loads": [
+    5811,
+    5811,
+    5811
+  ],
+  "target_coverage_rows": 17433,
+  "teachers": [
+    {
+      "teacher_id": 0,
+      "dataset_name": "teacher_00",
+      "dataset_dir": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind_outer1_nested_oof/teacher_00",
+      "drug_bucket": 0,
+      "protein_bucket": 0,
+      "train_rows": 6965,
+      "val_rows": 774,
+      "target_rows": 1928,
+      "target_positive_rows": 691,
+      "target_train_drug_overlap": 0,
+      "target_train_protein_overlap": 0
+    },
+    {
+      "teacher_id": 1,
+      "dataset_name": "teacher_01",
+      "dataset_dir": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind_outer1_nested_oof/teacher_01",
+      "drug_bucket": 0,
+      "protein_bucket": 1,
+      "train_rows": 6976,
+      "val_rows": 775,
+      "target_rows": 1940,
+      "target_positive_rows": 754,
+      "target_train_drug_overlap": 0,
+      "target_train_protein_overlap": 0
+    },
+    {
+      "teacher_id": 2,
+      "dataset_name": "teacher_02",
+      "dataset_dir": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind_outer1_nested_oof/teacher_02",
+      "drug_bucket": 0,
+      "protein_bucket": 2,
+      "train_rows": 6979,
+      "val_rows": 775,
+      "target_rows": 1943,
+      "target_positive_rows": 734,
+      "target_train_drug_overlap": 0,
+      "target_train_protein_overlap": 0
+    },
+    {
+      "teacher_id": 3,
+      "dataset_name": "teacher_03",
+      "dataset_dir": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind_outer1_nested_oof/teacher_03",
+      "drug_bucket": 1,
+      "protein_bucket": 0,
+      "train_rows": 6999,
+      "val_rows": 777,
+      "target_rows": 1965,
+      "target_positive_rows": 744,
+      "target_train_drug_overlap": 0,
+      "target_train_protein_overlap": 0
+    },
+    {
+      "teacher_id": 4,
+      "dataset_name": "teacher_04",
+      "dataset_dir": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind_outer1_nested_oof/teacher_04",
+      "drug_bucket": 1,
+      "protein_bucket": 1,
+      "train_rows": 6927,
+      "val_rows": 770,
+      "target_rows": 1886,
+      "target_positive_rows": 738,
+      "target_train_drug_overlap": 0,
+      "target_train_protein_overlap": 0
+    },
+    {
+      "teacher_id": 5,
+      "dataset_name": "teacher_05",
+      "dataset_dir": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind_outer1_nested_oof/teacher_05",
+      "drug_bucket": 1,
+      "protein_bucket": 2,
+      "train_rows": 6994,
+      "val_rows": 777,
+      "target_rows": 1960,
+      "target_positive_rows": 750,
+      "target_train_drug_overlap": 0,
+      "target_train_protein_overlap": 0
+    },
+    {
+      "teacher_id": 6,
+      "dataset_name": "teacher_06",
+      "dataset_dir": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind_outer1_nested_oof/teacher_06",
+      "drug_bucket": 2,
+      "protein_bucket": 0,
+      "train_rows": 6956,
+      "val_rows": 773,
+      "target_rows": 1918,
+      "target_positive_rows": 685,
+      "target_train_drug_overlap": 0,
+      "target_train_protein_overlap": 0
+    },
+    {
+      "teacher_id": 7,
+      "dataset_name": "teacher_07",
+      "dataset_dir": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind_outer1_nested_oof/teacher_07",
+      "drug_bucket": 2,
+      "protein_bucket": 1,
+      "train_rows": 7016,
+      "val_rows": 780,
+      "target_rows": 1985,
+      "target_positive_rows": 743,
+      "target_train_drug_overlap": 0,
+      "target_train_protein_overlap": 0
+    },
+    {
+      "teacher_id": 8,
+      "dataset_name": "teacher_08",
+      "dataset_dir": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind_outer1_nested_oof/teacher_08",
+      "drug_bucket": 2,
+      "protein_bucket": 2,
+      "train_rows": 6947,
+      "val_rows": 772,
+      "target_rows": 1908,
+      "target_positive_rows": 740,
+      "target_train_drug_overlap": 0,
+      "target_train_protein_overlap": 0
+    }
+  ]
+}

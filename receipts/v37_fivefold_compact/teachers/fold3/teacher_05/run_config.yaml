@@ -1,0 +1,51 @@
+data:
+  base_path: ../DPI/datasets
+  batch_size_train: 256
+  batch_size_val: 256
+  dataset_name: BindingDB_AIBind_outer3_nested_oof/teacher_05
+  embeddings: coldstartcpi
+  max_lig_tokens: 101
+  max_prot_tokens: 1001
+  num_workers: 0
+  official_lig_local_tokens: 100
+  official_prot_local_tokens: 1000
+  padding_mode: official_fixed
+  read_on_fly: false
+  set_id: 0
+  set_type: blind_start
+evaluation:
+  export_predictions: true
+  test_after_fit: true
+experiment:
+  mode: pretrain
+  name: v37_outer3_nested_teacher05
+  run_dir: ./runs/v37_outer3_nested_teacher05_20260812_032405
+  run_id: '20260812_032405'
+  save_dir: ./runs
+  seed: 1234
+loss:
+  name: CrossEntropyFromLogitsLoss
+  params:
+    label_smoothing: 0.0
+  use_dynamic_weights: false
+model:
+  name: ColdstartCPIRepro
+  params:
+    dropout: 0.1
+    latent_dim: 512
+    lig_dim: 300
+    num_heads: 4
+    output_dim: 2
+    prot_dim: 1024
+    use_padding_mask: false
+trainer:
+  accumulation_steps: 1
+  early_stopping_patience: 30
+  learning_rate: 0.0001
+  max_epochs: 150
+  monitor_metric: val_score
+  monitor_mode: max
+  optimizer: Adam
+  save_every_n_epochs: 25
+  seed: 1234
+  weight_decay: 0.0

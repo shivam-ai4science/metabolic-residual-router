@@ -1,0 +1,63 @@
+{
+  "protocol": "accepted-local-five-fold-raw-score-table-v1",
+  "source": "results/results_five_fold.csv",
+  "source_sha256": "f35c4f8ed80d9db57788fe444d2a9ad069b4ea66afaf453d001324a4d57317df",
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "means": {
+    "nature_auc": 0.839082,
+    "nature_aupr": 0.7845679999999999,
+    "repro_auc": 0.8361448,
+    "repro_aupr": 0.7827514,
+    "v36_auc": 0.8382612,
+    "v36_aupr": 0.7852116,
+    "v37_auc": 0.8422166,
+    "v37_aupr": 0.7929954
+  },
+  "deltas_pp": {
+    "v37_minus_repro_auc": 0.6071800000000005,
+    "v37_minus_repro_aupr": 1.024400000000003,
+    "v37_minus_v36_auc": 0.3955400000000009,
+    "v37_minus_v36_aupr": 0.7783800000000007,
+    "v37_minus_nature_auc": 0.3134600000000032,
+    "v37_minus_nature_aupr": 0.842740000000004
+  },
+  "win_loss_tie": {
+    "v37_vs_repro_auc": {
+      "wins": 5,
+      "losses": 0,
+      "ties": 0
+    },
+    "v37_vs_repro_aupr": {
+      "wins": 5,
+      "losses": 0,
+      "ties": 0
+    },
+    "v37_vs_v36_auc": {
+      "wins": 5,
+      "losses": 0,
+      "ties": 0
+    },
+    "v37_vs_v36_aupr": {
+      "wins": 5,
+      "losses": 0,
+      "ties": 0
+    },
+    "v37_vs_nature_auc": {
+      "wins": 4,
+      "losses": 1,
+      "ties": 0
+    },
+    "v37_vs_nature_aupr": {
+      "wins": 5,
+      "losses": 0,
+      "ties": 0
+    }
+  },
+  "uncertainty": "No confidence interval or bootstrap estimate is in the accepted local pipeline; none was invented."
+}

@@ -1,0 +1,95 @@
+experiment:
+  name: "metabolic_routed_residual_v37_raw_pretrain_fold0"
+  mode: "finetune"
+  save_dir: "./runs"
+  seed: 1234
+
+finetune:
+  source_run: "aibind_coldstart_repro_ce_fold0_150ep_20260731_031307"
+  checkpoint_type: "best"
+  freeze_backbone: false
+  validate_checkpoint_keys: true
+  min_source_model_coverage: 0.99
+  required_source_prefixes:
+    - "model.lig_global_unit"
+    - "model.lig_token_unit"
+    - "model.prot_global_unit"
+    - "model.prot_token_unit"
+    - "model.interaction_layer"
+    - "model.predict_layer"
+
+data:
+  dataset_name: "metabolic_pathway_phase_2_fold0_strict_random_pair_split"
+  base_path: "../DPI/datasets"
+  set_type: blind_start
+  set_id: 0
+  read_on_fly: false
+  batch_size_train: 64
+  batch_size_val: 128
+  num_workers: 0
+  embeddings: "coldstartcpi"
+  max_lig_tokens: 101
+  max_prot_tokens: 1001
+  padding_mode: "official_fixed"
+  official_lig_local_tokens: 100
+  official_prot_local_tokens: 1000
+  train_fraction: 1.0
+  val_fraction: 1.0
+
+model:
+  name: "RoutedMetabolicResidualCPI"
+  params:
+    latent_dim: 512
+    num_heads: 4
+    dropout: 0.1
+    use_padding_mask: false
+    output_dim: 2
+    side_dim: 128
+    interaction_dim: 64
+    router_hidden_dim: 256
+    contact_dim: 64
+    topk_scale: 0.25
+    topk_min: 8
+    topk_max: 64
+    base_temperature: 1.0
+    uncertainty_temperature: 1.0
+    uncertainty_floor: 0.05
+    max_correction: 1.0
+    relevance_bias: -1.0
+    abstain_bias: 1.0
+    directional_bias: -1.0
+    expert_bias: -3.0
+    freeze_base: true
+    detach_base_features: true
+    freeze_metabolic_encoder: false
+    freeze_router: true
+
+loss:
+  name: RoutedMetabolicPretrainingLoss
+  use_dynamic_weights: false
+  params:
+    pairwise_weight: 1.0
+    pairwise_margin: 0.2
+    positive_margin_weight: 0.1
+    positive_margin: 0.1
+    unlabeled_penalty_weight: 0.03
+    unlabeled_margin: 0.25
+    relevance_weight: 0.1
+    unlabeled_relevance_weight: 0.25
+    center_weight: 0.05
+
+trainer:
+  seed: 1234
+  max_epochs: 20
+  learning_rate: 5e-4
+  weight_decay: 1e-4
+  optimizer: AdamW
+  accumulation_steps: 2
+  monitor_metric: val_metabolic_score
+  monitor_mode: max
+  early_stopping_patience: 5
+  save_every_n_epochs: 5
+
+evaluation:
+  test_after_fit: false
+  export_predictions: false

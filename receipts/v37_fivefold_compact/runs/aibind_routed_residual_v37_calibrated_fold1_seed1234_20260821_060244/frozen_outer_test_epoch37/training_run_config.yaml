@@ -1,0 +1,111 @@
+calibration:
+  input_sha256: 4975084dc032748ce9917a3eb99ea3be31a8dc090c6dba2009ce8f0f77e76347
+  outer_set_id: 1
+  output_sha256: e1809d95db08cbc4a61a7e2c8c7a379091cba63f5894b13d63c63c14289d4be6
+  protocol: leave-one-teacher-block-out-platt-v1
+  summary: /home/ubuntu/chandu_experiments/DPI_experiments/reports/v37_nested_oof_outer1/BindingDB_AIBind_outer1_nested_dual_blind_oof_calibration_summary.json
+data:
+  base_path: ../DPI/datasets
+  batch_size_train: 128
+  batch_size_val: 256
+  dataset_name: BindingDB_AIBind_router_oof_outer1_nested_dual_blind_calibrated
+  embeddings: coldstartcpi
+  max_lig_tokens: 101
+  max_prot_tokens: 1001
+  num_workers: 0
+  official_lig_local_tokens: 100
+  official_prot_local_tokens: 1000
+  padding_mode: official_fixed
+  read_on_fly: false
+  set_id: 1
+  set_type: blind_start
+evaluation:
+  export_predictions: true
+  test_after_fit: false
+experiment:
+  mode: finetune
+  name: aibind_routed_residual_v37_calibrated_fold1_seed1234
+  run_dir: ./runs/aibind_routed_residual_v37_calibrated_fold1_seed1234_20260821_060244
+  run_id: '20260821_060244'
+  save_dir: ./runs
+  seed: 1234
+finetune:
+  checkpoint_type: best
+  freeze_backbone: false
+  min_source_model_coverage: 0.999
+  required_source_prefixes:
+  - model.lig_global_unit
+  - model.interaction_layer
+  - model.routed_ligand_global_encoder
+  - model.routed_ligand_token_encoder
+  - model.routed_protein_global_encoder
+  - model.routed_protein_token_encoder
+  - model.routed_compatibility_encoder
+  - model.routed_relevance
+  source_run: metabolic_routed_residual_v37_raw_pretrain_fold1_20260818_105559
+  validate_checkpoint_keys: true
+loss:
+  name: RoutedResidualMultiTaskLoss
+  params:
+    activity_weight: 0.01
+    brier_weight: 0.05
+    correction_l1_weight: 0.01
+    distill_weight: 0.25
+    label_smoothing: 0.0
+    require_oof_targets: true
+    router_gamma: 2.0
+    router_weight: 0.25
+  use_dynamic_weights: false
+model:
+  name: RoutedMetabolicResidualCPI
+  params:
+    abstain_bias: 1.0
+    base_logit_bias: -0.037932639311779724
+    base_logit_scale: 0.12639725805386234
+    base_temperature: 1.0
+    contact_dim: 64
+    detach_base_features: true
+    directional_bias: -1.0
+    dropout: 0.1
+    expert_bias: -3.0
+    freeze_base: true
+    freeze_metabolic_encoder: false
+    freeze_router: false
+    interaction_dim: 64
+    latent_dim: 512
+    lig_dim: 300
+    max_correction: 1.0
+    num_heads: 4
+    output_dim: 2
+    prot_dim: 1024
+    relevance_bias: -1.0
+    router_hidden_dim: 256
+    side_dim: 128
+    topk_max: 64
+    topk_min: 8
+    topk_scale: 0.25
+    uncertainty_floor: 0.05
+    uncertainty_temperature: 1.0
+    use_padding_mask: false
+trainer:
+  accumulation_steps: 1
+  early_stopping_patience: 10
+  layer_rates:
+    routed_compatibility_: 3.0e-05
+    routed_contact_: 3.0e-05
+    routed_interaction_summary: 3.0e-05
+    routed_ligand_global_encoder: 3.0e-05
+    routed_ligand_side: 3.0e-05
+    routed_ligand_token_encoder: 3.0e-05
+    routed_protein_global_encoder: 3.0e-05
+    routed_protein_side: 3.0e-05
+    routed_protein_token_encoder: 3.0e-05
+    routed_relevance: 3.0e-05
+  learning_rate: 0.0003
+  max_epochs: 40
+  monitor_metric: val_score
+  monitor_mode: max
+  optimizer: AdamW
+  save_every_n_epochs: 5
+  seed: 1234
+  weight_decay: 0.0001

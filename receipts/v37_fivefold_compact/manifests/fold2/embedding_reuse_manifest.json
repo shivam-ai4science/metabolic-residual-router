@@ -1,0 +1,60 @@
+{
+  "method": "exact_entity_value_rekey_v1",
+  "target_dataset_dir": "/home/ubuntu/chandu_experiments/DPI/datasets/metabolic_pathway_phase_2_fold2_strict",
+  "source_dataset_dirs": [
+    "/home/ubuntu/chandu_experiments/DPI/datasets/metabolic_pathway_phase_2_fold4_strict",
+    "/home/ubuntu/chandu_experiments/DPI/datasets/metabolic_pathway_phase_2_fold3_strict",
+    "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind",
+    "/home/ubuntu/chandu_experiments/ColdstartCPI-main/Datasets/metabolic_pathway_phase_2_fold2_residual16"
+  ],
+  "uses_labels": false,
+  "uses_predictions": false,
+  "drugs": {
+    "target_count": 2370,
+    "source_counts": {
+      "/home/ubuntu/chandu_experiments/DPI/datasets/metabolic_pathway_phase_2_fold4_strict": 2368,
+      "/home/ubuntu/chandu_experiments/DPI/datasets/metabolic_pathway_phase_2_fold3_strict": 0,
+      "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind": 2
+    },
+    "source_consistency": {
+      "/home/ubuntu/chandu_experiments/DPI/datasets/metabolic_pathway_phase_2_fold4_strict": {
+        "shared_values_checked": 0,
+        "max_abs_difference": 0.0
+      },
+      "/home/ubuntu/chandu_experiments/DPI/datasets/metabolic_pathway_phase_2_fold3_strict": {
+        "shared_values_checked": 64,
+        "max_abs_difference": 0.0
+      },
+      "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind": {
+        "shared_values_checked": 0,
+        "max_abs_difference": 0.0
+      }
+    },
+    "output_path": "/home/ubuntu/chandu_experiments/DPI/datasets/metabolic_pathway_phase_2_fold2_strict/embeddings/drugs/ligand_embeddings_coldstartcpi.pt",
+    "output_bytes": 66557335
+  },
+  "proteins": {
+    "target_count": 41717,
+    "source_counts": {
+      "/home/ubuntu/chandu_experiments/DPI/datasets/metabolic_pathway_phase_2_fold3_strict": 41687,
+      "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind": 22,
+      "/home/ubuntu/chandu_experiments/ColdstartCPI-main/Datasets/metabolic_pathway_phase_2_fold2_residual16": 8
+    },
+    "source_consistency": {
+      "/home/ubuntu/chandu_experiments/DPI/datasets/metabolic_pathway_phase_2_fold3_strict": {
+        "shared_values_checked": 0,
+        "max_abs_difference": 0.0
+      },
+      "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind": {
+        "shared_values_checked": 3,
+        "max_abs_difference": 0.0
+      },
+      "/home/ubuntu/chandu_experiments/ColdstartCPI-main/Datasets/metabolic_pathway_phase_2_fold2_residual16": {
+        "shared_values_checked": 8,
+        "max_abs_difference": 0.0
+      }
+    },
+    "output_path": "/home/ubuntu/chandu_experiments/DPI/datasets/metabolic_pathway_phase_2_fold2_strict/embeddings/proteins_prottrans_bfd/protein_embeddings_coldstartcpi.pt",
+    "output_bytes": 80257111337
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "auc": 0.8315465097568723,
+  "aupr": 0.759374522131076,
+  "average_precision": 0.7594466546067355,
+  "checkpoint": "best_model_epoch37.ckpt",
+  "correction": "Removed exact duplicate test rows, matching train.load_dataframes().",
+  "model_parameters_changed": false,
+  "output_sha256": "cbf47b16e2933fe70411b3746d29ecd8fce7874b0d94b639bb76c639afe96091",
+  "positive_rows": 2916,
+  "removed_rows": [
+    {
+      "head": 6432,
+      "label": 1,
+      "tail": 3718
+    },
+    {
+      "head": 6432,
+      "label": 1,
+      "tail": 2996
+    }
+  ],
+  "rows": 7869,
+  "source_predictions": "runs/aibind_routed_residual_v37_calibrated_fold0_seed1234_20260809_075410/frozen_outer_test_epoch37/test_predictions.csv",
+  "source_sha256": "5aeb446974ae6e1d90c07e90147c5186e926386a176519b1dd20d85011c8c43d"
+}

@@ -1,0 +1,93 @@
+data:
+  base_path: ../DPI/datasets
+  batch_size_train: 64
+  batch_size_val: 128
+  dataset_name: metabolic_pathway_phase_2_fold3_strict_random_pair_split
+  embeddings: coldstartcpi
+  max_lig_tokens: 101
+  max_prot_tokens: 1001
+  num_workers: 0
+  official_lig_local_tokens: 100
+  official_prot_local_tokens: 1000
+  padding_mode: official_fixed
+  read_on_fly: false
+  set_id: 0
+  set_type: blind_start
+  train_fraction: 1.0
+  val_fraction: 1.0
+evaluation:
+  export_predictions: false
+  test_after_fit: false
+experiment:
+  mode: finetune
+  name: metabolic_routed_residual_v37_raw_pretrain_fold3
+  run_dir: ./runs/metabolic_routed_residual_v37_raw_pretrain_fold3_20260810_075640
+  run_id: '20260810_075640'
+  save_dir: ./runs
+  seed: 1234
+finetune:
+  checkpoint_type: best
+  freeze_backbone: false
+  min_source_model_coverage: 0.99
+  required_source_prefixes:
+  - model.lig_global_unit
+  - model.lig_token_unit
+  - model.prot_global_unit
+  - model.prot_token_unit
+  - model.interaction_layer
+  - model.predict_layer
+  source_run: aibind_coldstart_repro_ce_fold3_150ep_20260802_141958
+  validate_checkpoint_keys: true
+loss:
+  name: RoutedMetabolicPretrainingLoss
+  params:
+    center_weight: 0.05
+    pairwise_margin: 0.2
+    pairwise_weight: 1.0
+    positive_margin: 0.1
+    positive_margin_weight: 0.1
+    relevance_weight: 0.1
+    unlabeled_margin: 0.25
+    unlabeled_penalty_weight: 0.03
+    unlabeled_relevance_weight: 0.25
+  use_dynamic_weights: false
+model:
+  name: RoutedMetabolicResidualCPI
+  params:
+    abstain_bias: 1.0
+    base_temperature: 1.0
+    contact_dim: 64
+    detach_base_features: true
+    directional_bias: -1.0
+    dropout: 0.1
+    expert_bias: -3.0
+    freeze_base: true
+    freeze_metabolic_encoder: false
+    freeze_router: true
+    interaction_dim: 64
+    latent_dim: 512
+    lig_dim: 300
+    max_correction: 1.0
+    num_heads: 4
+    output_dim: 2
+    prot_dim: 1024
+    relevance_bias: -1.0
+    router_hidden_dim: 256
+    side_dim: 128
+    topk_max: 64
+    topk_min: 8
+    topk_scale: 0.25
+    uncertainty_floor: 0.05
+    uncertainty_temperature: 1.0
+    use_padding_mask: false
+trainer:
+  accumulation_steps: 2
+  early_stopping_patience: 5
+  learning_rate: 0.0005
+  max_epochs: 20
+  monitor_metric: val_metabolic_score
+  monitor_mode: max
+  optimizer: AdamW
+  save_every_n_epochs: 5
+  seed: 1234
+  weight_decay: 0.0001

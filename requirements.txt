@@ -1,0 +1,9 @@
+numpy
+pandas
+prefetch-generator
+PyYAML
+scikit-learn
+scipy
+torch
+pytorch-lightning
+tqdm

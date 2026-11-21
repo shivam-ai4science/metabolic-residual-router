@@ -1,0 +1,618 @@
+{
+  "protocol": "v37-fivefold-compact-run-receipts-v1",
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "checkpoint_weights_included": false,
+  "datasets_included": false,
+  "embeddings_included": false,
+  "copied_file_count": 282,
+  "checkpoint_identities": [
+    {
+      "fold": 0,
+      "stage": "stage1",
+      "teacher": null,
+      "run": "metabolic_routed_residual_v37_raw_pretrain_fold0_20260807_020102",
+      "checkpoint": "best_model_epoch19.ckpt",
+      "bytes": 54995637,
+      "sha256": "03a77928342832993db6cd35cf2865f596022f26b3c58554507b272cc453df86"
+    },
+    {
+      "fold": 0,
+      "stage": "stage2",
+      "teacher": null,
+      "run": "aibind_routed_residual_v37_calibrated_fold0_seed1234_20260809_075410",
+      "checkpoint": "best_model_epoch37.ckpt",
+      "bytes": 59411785,
+      "sha256": "3b8e1193c104798bdfeda5b99af5a50696af928448f9c9fbdb2949428d522132"
+    },
+    {
+      "fold": 0,
+      "stage": "teacher",
+      "teacher": 0,
+      "run": "v37_outer0_nested_teacher00_20260807_173913",
+      "checkpoint": "best_model_epoch25.ckpt",
+      "bytes": 94152243,
+      "sha256": "23a02a87a62be9f1548144fc7fbe149776b5e77804e79b595768cc597df7f674"
+    },
+    {
+      "fold": 0,
+      "stage": "teacher",
+      "teacher": 1,
+      "run": "v37_outer0_nested_teacher01_20260807_201433",
+      "checkpoint": "best_model_epoch34.ckpt",
+      "bytes": 94152243,
+      "sha256": "fade75ae9a502e9435905aacb7069ff1ecfa31a71e16fe8d7047bf0e00fa7588"
+    },
+    {
+      "fold": 0,
+      "stage": "teacher",
+      "teacher": 2,
+      "run": "v37_outer0_nested_teacher02_20260808_041635",
+      "checkpoint": "best_model_epoch20.ckpt",
+      "bytes": 94152179,
+      "sha256": "0eeb82e0ad170422a0625872b9a641795fcf33a20df831611d42c6e50de8c5a6"
+    },
+    {
+      "fold": 0,
+      "stage": "teacher",
+      "teacher": 3,
+      "run": "v37_outer0_nested_teacher03_20260808_082559",
+      "checkpoint": "best_model_epoch45.ckpt",
+      "bytes": 94152243,
+      "sha256": "1749eab34f67f41131b627236dacce753ddc0d30cd846d700ab9cc94d4a0cb05"
+    },
+    {
+      "fold": 0,
+      "stage": "teacher",
+      "teacher": 4,
+      "run": "v37_outer0_nested_teacher04_20260808_114845",
+      "checkpoint": "best_model_epoch32.ckpt",
+      "bytes": 94152243,
+      "sha256": "cefc0a46052f7ac50799e1f729f79fcf4a4ccaef2738347eca11bc5557a764d2"
+    },
+    {
+      "fold": 0,
+      "stage": "teacher",
+      "teacher": 5,
+      "run": "v37_outer0_nested_teacher05_20260808_143627",
+      "checkpoint": "best_model_epoch103.ckpt",
+      "bytes": 94152307,
+      "sha256": "1acf8c39b1ca80ce641c85009b1d3e0824522d6b4549a81499d6bf3bb1069d2c"
+    },
+    {
+      "fold": 0,
+      "stage": "teacher",
+      "teacher": 6,
+      "run": "v37_outer0_nested_teacher06_20260808_203214",
+      "checkpoint": "best_model_epoch93.ckpt",
+      "bytes": 94152243,
+      "sha256": "e83527f8c608ae38f2e41c6b07b41cc01543777183ffe71ee950b131a6b70c67"
+    },
+    {
+      "fold": 0,
+      "stage": "teacher",
+      "teacher": 7,
+      "run": "v37_outer0_nested_teacher07_20260809_020159",
+      "checkpoint": "best_model_epoch21.ckpt",
+      "bytes": 94152179,
+      "sha256": "f2b5aae12f59b8ad41a5297cd138b1a9964606e308a716d088a74c093e5d6089"
+    },
+    {
+      "fold": 0,
+      "stage": "teacher",
+      "teacher": 8,
+      "run": "v37_outer0_nested_teacher08_20260809_042132",
+      "checkpoint": "best_model_epoch12.ckpt",
+      "bytes": 94152179,
+      "sha256": "c86ce88165d791aa98be5e7cb48b59b484c01a94062084e57c26cc2d56977a9d"
+    },
+    {
+      "fold": 1,
+      "stage": "stage1",
+      "teacher": null,
+      "run": "metabolic_routed_residual_v37_raw_pretrain_fold1_20260818_105559",
+      "checkpoint": "best_model_epoch19.ckpt",
+      "bytes": 54995637,
+      "sha256": "85674a102f65ddb25efb02b5f2bb3c7b1ad203a841e428629179f388b9833e48"
+    },
+    {
+      "fold": 1,
+      "stage": "stage2",
+      "teacher": null,
+      "run": "aibind_routed_residual_v37_calibrated_fold1_seed1234_20260821_060244",
+      "checkpoint": "best_model_epoch37.ckpt",
+      "bytes": 59411785,
+      "sha256": "9bc83e88f285a9c8f2e495e6f07827753c4cb29c2b36d63d0bebf39ae60d6c73"
+    },
+    {
+      "fold": 1,
+      "stage": "teacher",
+      "teacher": 0,
+      "run": "v37_outer1_nested_teacher00_20260819_055142",
+      "checkpoint": "best_model_epoch66.ckpt",
+      "bytes": 94152243,
+      "sha256": "390b14de44d9cd745f07a44aa1a3b40595a4651d64d0d95f3b318d0cb279e294"
+    },
+    {
+      "fold": 1,
+      "stage": "teacher",
+      "teacher": 1,
+      "run": "v37_outer1_nested_teacher01_20260819_154304",
+      "checkpoint": "best_model_epoch80.ckpt",
+      "bytes": 94152243,
+      "sha256": "caeb1af8830eb6fbb0bca91ba8ff98e902e8e40b389e37cdf205326151017b78"
+    },
+    {
+      "fold": 1,
+      "stage": "teacher",
+      "teacher": 2,
+      "run": "v37_outer1_nested_teacher02_20260819_202839",
+      "checkpoint": "best_model_epoch136.ckpt",
+      "bytes": 94152307,
+      "sha256": "90e2b9e8e4ebfed61d7ffbeafeef435388eeb26f9a6171780b761952c02e6bf8"
+    },
+    {
+      "fold": 1,
+      "stage": "teacher",
+      "teacher": 3,
+      "run": "v37_outer1_nested_teacher03_20260820_025402",
+      "checkpoint": "best_model_epoch42.ckpt",
+      "bytes": 94152243,
+      "sha256": "5ac06dbd6c44aa27a0020b4782d6fde9103f3dfe81db1c14850358ca3a839961"
+    },
+    {
+      "fold": 1,
+      "stage": "teacher",
+      "teacher": 4,
+      "run": "v37_outer1_nested_teacher04_20260820_060256",
+      "checkpoint": "best_model_epoch24.ckpt",
+      "bytes": 94152179,
+      "sha256": "3e16c291e32e129f237d7e780a21d2dedbf2f1ed90b6f8e9472da09054ed0f67"
+    },
+    {
+      "fold": 1,
+      "stage": "teacher",
+      "teacher": 5,
+      "run": "v37_outer1_nested_teacher05_20260820_082324",
+      "checkpoint": "best_model_epoch71.ckpt",
+      "bytes": 94152243,
+      "sha256": "ca1c47738a2506fab8aca2001b6e6bf4fd90e4acdb04e605a4be95ac281fc615"
+    },
+    {
+      "fold": 1,
+      "stage": "teacher",
+      "teacher": 6,
+      "run": "v37_outer1_nested_teacher06_20260820_124558",
+      "checkpoint": "best_model_epoch51.ckpt",
+      "bytes": 94152243,
+      "sha256": "50f3319cca42e14baa23b4f7bacc31800b095d62d47b8ae6403e2e156a32d421"
+    },
+    {
+      "fold": 1,
+      "stage": "teacher",
+      "teacher": 7,
+      "run": "v37_outer1_nested_teacher07_20260820_161700",
+      "checkpoint": "best_model_epoch32.ckpt",
+      "bytes": 94152243,
+      "sha256": "63b76975d077d1a6eb36d6388505515739a3fb8c0b81d0efdac6b2287af4c26f"
+    },
+    {
+      "fold": 1,
+      "stage": "teacher",
+      "teacher": 8,
+      "run": "v37_outer1_nested_teacher08_20260820_190018",
+      "checkpoint": "best_model_epoch24.ckpt",
+      "bytes": 94152179,
+      "sha256": "d2a7335adb39bdbbb3da9a5675b234460fbeba2af92450a04fb30b2d3c915692"
+    },
+    {
+      "fold": 2,
+      "stage": "stage1",
+      "teacher": null,
+      "run": "metabolic_routed_residual_v37_raw_pretrain_fold2_20260813_182922",
+      "checkpoint": "best_model_epoch18.ckpt",
+      "bytes": 54995637,
+      "sha256": "6aaf83e1ff3054f362093aa27da03da2144e21ae5c8210eee665f852d0b0ce8a"
+    },
+    {
+      "fold": 2,
+      "stage": "stage2",
+      "teacher": null,
+      "run": "aibind_routed_residual_v37_calibrated_fold2_seed1234_20260817_071440",
+      "checkpoint": "best_model_epoch26.ckpt",
+      "bytes": 59411785,
+      "sha256": "1f91352aca3dce7e69498eb9c8fb65a505498ae9d2296cd8a5941820bd19e320"
+    },
+    {
+      "fold": 2,
+      "stage": "teacher",
+      "teacher": 0,
+      "run": "v37_outer2_nested_teacher00_20260814_192941",
+      "checkpoint": "best_model_epoch136.ckpt",
+      "bytes": 94152307,
+      "sha256": "973429c519dffe7c53dc0068355e1dad05fc3a2acc5aad3412145c8a56a8125d"
+    },
+    {
+      "fold": 2,
+      "stage": "teacher",
+      "teacher": 1,
+      "run": "v37_outer2_nested_teacher01_20260815_065217",
+      "checkpoint": "best_model_epoch43.ckpt",
+      "bytes": 94152243,
+      "sha256": "510a66aa957f994a8e4c3d27acd21f1f0623ecc90bc3e0033b86ce571e8f6b7a"
+    },
+    {
+      "fold": 2,
+      "stage": "teacher",
+      "teacher": 2,
+      "run": "v37_outer2_nested_teacher02_20260815_101001",
+      "checkpoint": "best_model_epoch52.ckpt",
+      "bytes": 94152243,
+      "sha256": "53b4d498f75b8e811f0939e937b038211bdda4ed1b0525a2fb7eb9b181d96b74"
+    },
+    {
+      "fold": 2,
+      "stage": "teacher",
+      "teacher": 3,
+      "run": "v37_outer2_nested_teacher03_20260815_135225",
+      "checkpoint": "best_model_epoch32.ckpt",
+      "bytes": 94152243,
+      "sha256": "cdc6495c648688f460ad8c5c04129cbfc35ace10c996113ec868a0e70f3ab3f0"
+    },
+    {
+      "fold": 2,
+      "stage": "teacher",
+      "teacher": 4,
+      "run": "v37_outer2_nested_teacher04_20260815_164034",
+      "checkpoint": "best_model_epoch62.ckpt",
+      "bytes": 94152243,
+      "sha256": "d7c55d5bec6aabdffcea3b34d413884922f098dc774f5544ae1e18f80e53c63e"
+    },
+    {
+      "fold": 2,
+      "stage": "teacher",
+      "teacher": 5,
+      "run": "v37_outer2_nested_teacher05_20260815_204912",
+      "checkpoint": "best_model_epoch146.ckpt",
+      "bytes": 94152307,
+      "sha256": "b4edff60e7c6f2c77eed3c330ad4d933d4bda6e916a0bf8ca9cdb13812aa82fb"
+    },
+    {
+      "fold": 2,
+      "stage": "teacher",
+      "teacher": 6,
+      "run": "v37_outer2_nested_teacher06_20260816_032715",
+      "checkpoint": "best_model_epoch28.ckpt",
+      "bytes": 94152243,
+      "sha256": "6cb5c4a56db08caccb0b0595a90d5a00993126983c67b86ef9ab591dfbd6fd81"
+    },
+    {
+      "fold": 2,
+      "stage": "teacher",
+      "teacher": 7,
+      "run": "v37_outer2_nested_teacher07_20260816_060506",
+      "checkpoint": "best_model_epoch135.ckpt",
+      "bytes": 94152307,
+      "sha256": "b4722b384ce52935fcfdc765b8a538a807b90977693ed14c93d2f43cf2aae724"
+    },
+    {
+      "fold": 2,
+      "stage": "teacher",
+      "teacher": 8,
+      "run": "v37_outer2_nested_teacher08_20260816_124152",
+      "checkpoint": "best_model_epoch149.ckpt",
+      "bytes": 94152307,
+      "sha256": "1a2db72f4f78cba396341b71bb2bebbf20dca81db3c8204076487742adb71ade"
+    },
+    {
+      "fold": 3,
+      "stage": "stage1",
+      "teacher": null,
+      "run": "metabolic_routed_residual_v37_raw_pretrain_fold3_20260810_075640",
+      "checkpoint": "best_model_epoch18.ckpt",
+      "bytes": 54995637,
+      "sha256": "caa6439e1a6ba63a3b95560958157d68a6141888421ad8c15fe8c19691fda20e"
+    },
+    {
+      "fold": 3,
+      "stage": "stage2",
+      "teacher": null,
+      "run": "aibind_routed_residual_v37_calibrated_fold3_seed1234_20260813_023953",
+      "checkpoint": "best_model_epoch38.ckpt",
+      "bytes": 59411785,
+      "sha256": "f279583ed678169899523df49af4bfa2dad36a22244f2b58675a714656e7b1e2"
+    },
+    {
+      "fold": 3,
+      "stage": "teacher",
+      "teacher": 0,
+      "run": "v37_outer3_nested_teacher00_20260811_041507",
+      "checkpoint": "best_model_epoch46.ckpt",
+      "bytes": 94152243,
+      "sha256": "b4bb3109c95156c737ad34d523832993c32d1f11b61e443636e0f28086478590"
+    },
+    {
+      "fold": 3,
+      "stage": "teacher",
+      "teacher": 1,
+      "run": "v37_outer3_nested_teacher01_20260811_103538",
+      "checkpoint": "best_model_epoch61.ckpt",
+      "bytes": 94152243,
+      "sha256": "604691b25b8866b821f95cdc5bed4c809cf9d037ab78aacd13d5fb7724476d62"
+    },
+    {
+      "fold": 3,
+      "stage": "teacher",
+      "teacher": 2,
+      "run": "v37_outer3_nested_teacher02_20260811_143715",
+      "checkpoint": "best_model_epoch49.ckpt",
+      "bytes": 94152243,
+      "sha256": "58c0b6b69bc651c4fbbebaa0e30fb448047dfbcbeea6b778ab9e102d54c61c76"
+    },
+    {
+      "fold": 3,
+      "stage": "teacher",
+      "teacher": 3,
+      "run": "v37_outer3_nested_teacher03_20260811_180812",
+      "checkpoint": "best_model_epoch55.ckpt",
+      "bytes": 94152243,
+      "sha256": "f880ebbae70f44f6110b446db355510bd8364fc85f124f70e975502da111cfcf"
+    },
+    {
+      "fold": 3,
+      "stage": "teacher",
+      "teacher": 4,
+      "run": "v37_outer3_nested_teacher04_20260811_215326",
+      "checkpoint": "best_model_epoch94.ckpt",
+      "bytes": 94152243,
+      "sha256": "83544ef44af1fb10669a29bad3d526db22620ba3f984149ff7376885db3e6013"
+    },
+    {
+      "fold": 3,
+      "stage": "teacher",
+      "teacher": 5,
+      "run": "v37_outer3_nested_teacher05_20260812_032405",
+      "checkpoint": "best_model_epoch54.ckpt",
+      "bytes": 94152243,
+      "sha256": "10c3bfcf3bfc4c798ccf66a424bb4b12e78e1637911090095825bd33c0dc6092"
+    },
+    {
+      "fold": 3,
+      "stage": "teacher",
+      "teacher": 6,
+      "run": "v37_outer3_nested_teacher06_20260812_070752",
+      "checkpoint": "best_model_epoch93.ckpt",
+      "bytes": 94152243,
+      "sha256": "f9225c259dc34c236408b57a733cbc4b5b36bc189a21cb8a9130609eaaa2d603"
+    },
+    {
+      "fold": 3,
+      "stage": "teacher",
+      "teacher": 7,
+      "run": "v37_outer3_nested_teacher07_20260812_123440",
+      "checkpoint": "best_model_epoch74.ckpt",
+      "bytes": 94152243,
+      "sha256": "4ee2e214380ab0ec46f7146779c743d7b197f6a3c3034b731461cb0f6c506811"
+    },
+    {
+      "fold": 3,
+      "stage": "teacher",
+      "teacher": 8,
+      "run": "v37_outer3_nested_teacher08_20260812_170959",
+      "checkpoint": "best_model_epoch139.ckpt",
+      "bytes": 94152307,
+      "sha256": "e4c2ab3b847b4c814d12de6a9d08455ab86656b9cb56cc77dedc0ea1c870a4cc"
+    },
+    {
+      "fold": 4,
+      "stage": "stage1",
+      "teacher": null,
+      "run": "metabolic_routed_residual_v37_raw_pretrain_fold4_20260803_084301",
+      "checkpoint": "best_model_epoch19.ckpt",
+      "bytes": 54995637,
+      "sha256": "823ebd58cf77adfdce292b38772021f95a5395abb087ab3057ce26645debf5a6"
+    },
+    {
+      "fold": 4,
+      "stage": "stage2",
+      "teacher": null,
+      "run": "aibind_routed_residual_v37_calibrated_fold4_seed1234_20260806_051235",
+      "checkpoint": "best_model_epoch37.ckpt",
+      "bytes": 59411785,
+      "sha256": "5312a1172c511286d5208730f56e8295e7cc4f72418713b0f2a12dbb43383637"
+    },
+    {
+      "fold": 4,
+      "stage": "teacher",
+      "teacher": 0,
+      "run": "v37_outer4_nested_teacher00_20260804_041346",
+      "checkpoint": "best_model_epoch60.ckpt",
+      "bytes": 94152243,
+      "sha256": "d453923abeb6bf8bd200fee7b4c8edf8f767936390cc8ede4c6eace0da752703"
+    },
+    {
+      "fold": 4,
+      "stage": "teacher",
+      "teacher": 1,
+      "run": "v37_outer4_nested_teacher01_20260804_081613",
+      "checkpoint": "best_model_epoch107.ckpt",
+      "bytes": 94152307,
+      "sha256": "164feaf3775903e19e5e98544474b7e67e41f140d66e3fcbd6b51b52b11e0081"
+    },
+    {
+      "fold": 4,
+      "stage": "teacher",
+      "teacher": 2,
+      "run": "v37_outer4_nested_teacher02_20260804_141953",
+      "checkpoint": "best_model_epoch145.ckpt",
+      "bytes": 94152307,
+      "sha256": "f16bb369b57538b15fccaf7b05608966ab353b60af90675a549fcf6133527f54"
+    },
+    {
+      "fold": 4,
+      "stage": "teacher",
+      "teacher": 3,
+      "run": "v37_outer4_nested_teacher03_20260804_205815",
+      "checkpoint": "best_model_epoch64.ckpt",
+      "bytes": 94152243,
+      "sha256": "6672a5309c841348610a6900acbd88574c0b8b1e942f1edd813c040d1546e683"
+    },
+    {
+      "fold": 4,
+      "stage": "teacher",
+      "teacher": 4,
+      "run": "v37_outer4_nested_teacher04_20260805_011019",
+      "checkpoint": "best_model_epoch92.ckpt",
+      "bytes": 94152243,
+      "sha256": "d0ea417071ce8c56d35e9e3a2afd40b70ab59f7ff113bb7d5712f33d41e349f3"
+    },
+    {
+      "fold": 4,
+      "stage": "teacher",
+      "teacher": 5,
+      "run": "v37_outer4_nested_teacher05_20260805_063931",
+      "checkpoint": "best_model_epoch24.ckpt",
+      "bytes": 94152179,
+      "sha256": "1c7afed571b41b7212100c9c7bfc97c6928a81a87f186a00b0aff4422426819e"
+    },
+    {
+      "fold": 4,
+      "stage": "teacher",
+      "teacher": 6,
+      "run": "v37_outer4_nested_teacher06_20260805_090508",
+      "checkpoint": "best_model_epoch29.ckpt",
+      "bytes": 94152243,
+      "sha256": "c381738f5719e5a19dd0f28a6afae906d3e345b681351624b9ecebc843164fb9"
+    },
+    {
+      "fold": 4,
+      "stage": "teacher",
+      "teacher": 7,
+      "run": "v37_outer4_nested_teacher07_20260805_114425",
+      "checkpoint": "best_model_epoch76.ckpt",
+      "bytes": 94152243,
+      "sha256": "8765b532d65956d6ac5e56a17741dda50cbc7f7fe0477366ea54827038ac11af"
+    },
+    {
+      "fold": 4,
+      "stage": "teacher",
+      "teacher": 8,
+      "run": "v37_outer4_nested_teacher08_20260805_162848",
+      "checkpoint": "best_model_epoch23.ckpt",
+      "bytes": 94152179,
+      "sha256": "02c6d167dedb6c625c03e90ad05ccc5edf10bb53d47b0821a4c1f4ca8b8ab471"
+    }
+  ],
+  "benchmark_split_identities": [
+    {
+      "fold": 0,
+      "split": "train",
+      "source_path": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind/blind_start/train_set0.csv",
+      "bytes": 548146,
+      "sha256": "d72351daf38c065688cb7af6ee0bce7aab15ec1f47988397a59230ed81ad937e"
+    },
+    {
+      "fold": 0,
+      "split": "val",
+      "source_path": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind/blind_start/val_set0.csv",
+      "bytes": 727365,
+      "sha256": "86171df257dfc53ea4b30095927c8bcce237743ea27ac7b53a1037709b8842ac"
+    },
+    {
+      "fold": 0,
+      "split": "test",
+      "source_path": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind/blind_start/test_set0.csv",
+      "bytes": 232436,
+      "sha256": "5c93718c21ccfd247e32310182421c19d70cef261fc94815e561c1c6a17755e6"
+    },
+    {
+      "fold": 1,
+      "split": "train",
+      "source_path": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind/blind_start/train_set1.csv",
+      "bytes": 523722,
+      "sha256": "9715d78858ff57ab700885b19ae99e40adcc4fb341647da7bf45d2ff62fb8a5d"
+    },
+    {
+      "fold": 1,
+      "split": "val",
+      "source_path": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind/blind_start/val_set1.csv",
+      "bytes": 736805,
+      "sha256": "944b952d78e3fc105f54e7428e9fddeb5595df499982c692a6eb4a3209d9ff6e"
+    },
+    {
+      "fold": 1,
+      "split": "test",
+      "source_path": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind/blind_start/test_set1.csv",
+      "bytes": 246932,
+      "sha256": "8c9a3e9df85e5a7ee4e45cbd01327cd6e8aa3fa471c8431b7c2b75ba55ce801d"
+    },
+    {
+      "fold": 2,
+      "split": "train",
+      "source_path": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind/blind_start/train_set2.csv",
+      "bytes": 544132,
+      "sha256": "c480804dc04fc8471050ce8c703ecc741c532681afac312231e0d946835fd669"
+    },
+    {
+      "fold": 2,
+      "split": "val",
+      "source_path": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind/blind_start/val_set2.csv",
+      "bytes": 730107,
+      "sha256": "ea76b031f913c4a07fe44b17a3ec2be5c9efefae20630ee2ed1774e0223e30f1"
+    },
+    {
+      "fold": 2,
+      "split": "test",
+      "source_path": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind/blind_start/test_set2.csv",
+      "bytes": 233675,
+      "sha256": "42660039f7577e8d2c711d9e8980085cc9f7de0d6cd7253d1683a70c3561d926"
+    },
+    {
+      "fold": 3,
+      "split": "train",
+      "source_path": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind/blind_start/train_set3.csv",
+      "bytes": 538968,
+      "sha256": "ffa967ab294e9a92c2febdacaccacedd79ef59ad08e89ecbf6548dd5f419e4c8"
+    },
+    {
+      "fold": 3,
+      "split": "val",
+      "source_path": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind/blind_start/val_set3.csv",
+      "bytes": 728590,
+      "sha256": "3b036d0e17e7b81ab5fce6e294d544af2df7ea83e53fad326b192f21ec69a061"
+    },
+    {
+      "fold": 3,
+      "split": "test",
+      "source_path": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind/blind_start/test_set3.csv",
+      "bytes": 240126,
+      "sha256": "179ff85d452e20204b045f6abdd20e52c4cade2c9b99ebadd408936661609e2d"
+    },
+    {
+      "fold": 4,
+      "split": "train",
+      "source_path": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind/blind_start/train_set4.csv",
+      "bytes": 552985,
+      "sha256": "45ae1adc0cb55b62a91027bddc1af92f5405e74775eccf8a2f0bb577909ed37d"
+    },
+    {
+      "fold": 4,
+      "split": "val",
+      "source_path": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind/blind_start/val_set4.csv",
+      "bytes": 721353,
+      "sha256": "3b966a84d183d2c15b7bbca588d3b74c97298070ec8af22ee4b6d58b54917c85"
+    },
+    {
+      "fold": 4,
+      "split": "test",
+      "source_path": "/home/ubuntu/chandu_experiments/DPI/datasets/BindingDB_AIBind/blind_start/test_set4.csv",
+      "bytes": 233570,
+      "sha256": "af14a4c7116be07413fb1094266d656dcdd0ca8fdfed63d6e705373007d3dc3c"
+    }
+  ]
+}

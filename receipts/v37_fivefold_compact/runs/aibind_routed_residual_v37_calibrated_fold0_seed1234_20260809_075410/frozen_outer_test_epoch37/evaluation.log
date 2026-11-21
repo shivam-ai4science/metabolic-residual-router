@@ -1,0 +1,43 @@
+Outer test rows: 7871
+Positive: 2918
+Negative: 4953
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA A100 80GB PCIe') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/home/ubuntu/miniconda3/envs/coldstartcpi/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:442: PossibleUserWarning: The dataloader, test_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 24 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Testing: 0it [00:00, ?it/s]Testing:   0%|          | 0/31 [00:00<?, ?it/s]Testing DataLoader 0:   0%|          | 0/31 [00:00<?, ?it/s]/home/ubuntu/miniconda3/envs/coldstartcpi/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:76: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 256. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+  warning_cache.warn(
+Testing DataLoader 0:   3%|▎         | 1/31 [00:00<00:15,  1.91it/s]Testing DataLoader 0:   6%|▋         | 2/31 [00:05<01:15,  2.62s/it]Testing DataLoader 0:  10%|▉         | 3/31 [00:09<01:31,  3.28s/it]Testing DataLoader 0:  13%|█▎        | 4/31 [00:14<01:37,  3.61s/it]Testing DataLoader 0:  16%|█▌        | 5/31 [00:19<01:39,  3.82s/it]Testing DataLoader 0:  19%|█▉        | 6/31 [00:23<01:39,  3.97s/it]Testing DataLoader 0:  23%|██▎       | 7/31 [00:28<01:37,  4.06s/it]Testing DataLoader 0:  26%|██▌       | 8/31 [00:33<01:34,  4.13s/it]Testing DataLoader 0:  29%|██▉       | 9/31 [00:37<01:32,  4.19s/it]Testing DataLoader 0:  32%|███▏      | 10/31 [00:42<01:28,  4.24s/it]Testing DataLoader 0:  35%|███▌      | 11/31 [00:46<01:25,  4.27s/it]Testing DataLoader 0:  39%|███▊      | 12/31 [00:51<01:21,  4.30s/it]Testing DataLoader 0:  42%|████▏     | 13/31 [00:56<01:17,  4.33s/it]Testing DataLoader 0:  45%|████▌     | 14/31 [01:00<01:13,  4.34s/it]Testing DataLoader 0:  48%|████▊     | 15/31 [01:05<01:09,  4.36s/it]Testing DataLoader 0:  52%|█████▏    | 16/31 [01:09<01:05,  4.37s/it]Testing DataLoader 0:  55%|█████▍    | 17/31 [01:14<01:01,  4.39s/it]Testing DataLoader 0:  58%|█████▊    | 18/31 [01:19<00:57,  4.40s/it]Testing DataLoader 0:  61%|██████▏   | 19/31 [01:23<00:52,  4.40s/it]Testing DataLoader 0:  65%|██████▍   | 20/31 [01:28<00:48,  4.41s/it]Testing DataLoader 0:  68%|██████▊   | 21/31 [01:32<00:44,  4.42s/it]Testing DataLoader 0:  71%|███████   | 22/31 [01:36<00:39,  4.38s/it]Testing DataLoader 0:  74%|███████▍  | 23/31 [01:41<00:35,  4.39s/it]Testing DataLoader 0:  77%|███████▋  | 24/31 [01:45<00:30,  4.40s/it]Testing DataLoader 0:  81%|████████  | 25/31 [01:49<00:26,  4.39s/it]Testing DataLoader 0:  84%|████████▍ | 26/31 [01:53<00:21,  4.38s/it]Testing DataLoader 0:  87%|████████▋ | 27/31 [01:58<00:17,  4.39s/it]Testing DataLoader 0:  90%|█████████ | 28/31 [02:03<00:13,  4.40s/it]Testing DataLoader 0:  94%|█████████▎| 29/31 [02:07<00:08,  4.41s/it]Testing DataLoader 0:  97%|█████████▋| 30/31 [02:12<00:04,  4.42s/it]/home/ubuntu/miniconda3/envs/coldstartcpi/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:76: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 191. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+  warning_cache.warn(
+Testing DataLoader 0: 100%|██████████| 31/31 [02:16<00:00,  4.39s/it]Testing DataLoader 0: 100%|██████████| 31/31 [02:16<00:00,  4.40s/it]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+       Test metric             DataLoader 0
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+        test_acc            0.7699148654937744
+        test_auc            0.8314905166625977
+        test_aupr           0.7593399882316589
+ test_average_precision     0.7594122886657715
+       test_brier           0.16125574707984924
+        test_ece            0.06048651039600372
+         test_f1            0.6393148899078369
+        test_loss            0.66060870885849
+       test_score           1.5908304452896118
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+FROZEN FOLD0 TEST RESULT:
+{
+  "test_acc": 0.7699148654937744,
+  "test_auc": 0.8314905166625977,
+  "test_aupr": 0.7593399882316589,
+  "test_average_precision": 0.7594122886657715,
+  "test_brier": 0.16125574707984924,
+  "test_ece": 0.06048651039600372,
+  "test_f1": 0.6393148899078369,
+  "test_loss": 0.66060870885849,
+  "test_score": 1.5908304452896118
+}
+Predictions: runs/aibind_routed_residual_v37_calibrated_fold0_seed1234_20260809_075410/frozen_outer_test_epoch37/test_predictions.csv

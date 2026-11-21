@@ -1,0 +1,73 @@
+experiment:
+  name: "metabolic_pathway_gated_coldstart_adapter_random_pair_v36_pu_rank"
+  mode: "finetune"
+  save_dir: "./runs"
+  seed: 1234
+
+finetune:
+  source_run: "aibind_coldstart_repro_ce_20260726_074952"
+  checkpoint_type: "best"
+  freeze_backbone: false
+
+data:
+  dataset_name: "metabolic_pathway_phase_2_fold4_strict_random_pair_split"
+  base_path: "../DPI/datasets"
+  set_type: blind_start
+  set_id: 0
+  read_on_fly: false
+  batch_size_train: 64
+  batch_size_val: 128
+  num_workers: 0
+  embeddings: "coldstartcpi"
+  max_lig_tokens: 101
+  max_prot_tokens: 1001
+  train_fraction: 0.5
+  val_fraction: 0.5
+
+model:
+  name: "PathwayGatedColdstartCPI"
+  params:
+    latent_dim: 512
+    num_heads: 4
+    dropout: 0.15
+    use_padding_mask: false
+    output_dim: 2
+    topk: 32
+    gate_bias: -1.5
+    max_gate: 0.50
+    max_delta: 4.0
+    delta_init_std: 0.006
+    freeze_base: true
+    detach_base_features: true
+
+loss:
+  name: PathwayResidualPULoss
+  use_dynamic_weights: false
+  params:
+    pairwise_weight: 1.0
+    pairwise_margin: 0.20
+    pos_margin_weight: 0.15
+    pos_margin: 0.10
+    unlabeled_positive_penalty_weight: 0.04
+    unlabeled_margin: 0.25
+    center_weight: 0.20
+    gate_l1_weight: 0.004
+    correction_l1_weight: 0.004
+    delta_l2_weight: 0.0001
+    entropy_weight: 0.001
+
+trainer:
+  seed: 1234
+  max_epochs: 14
+  learning_rate: 8e-4
+  weight_decay: 1e-4
+  optimizer: AdamW
+  accumulation_steps: 2
+  monitor_metric: val_correction_score
+  monitor_mode: max
+  early_stopping_patience: 5
+  save_every_n_epochs: 4
+
+evaluation:
+  test_after_fit: false
+  export_predictions: false

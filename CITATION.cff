@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software or its reproducibility materials, please cite the associated paper."
+title: "Metabolic Residual Router"
+type: software
+authors:
+  - given-names: Aaditya Narayan
+    family-names: Saxena
+  - given-names: Shivam
+    family-names: Saxena
+date-released: 2026-11-21

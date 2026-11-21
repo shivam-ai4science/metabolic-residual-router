@@ -1,0 +1,12 @@
+{
+  "protocol": "outer-train-only-nested-dual-entity-blind-v1",
+  "outer_set_id": 4,
+  "outer_train_sha256": "45ae1adc0cb55b62a91027bddc1af92f5405e74775eccf8a2f0bb577909ed37d",
+  "rows": 18355,
+  "positive_rows": 7278,
+  "negative_rows": 11077,
+  "teacher_count": 9,
+  "outer_val_accessed": false,
+  "outer_test_accessed": false,
+  "output_csv": "/home/ubuntu/chandu_experiments/DPI_experiments/reports/v37_nested_oof_outer4/BindingDB_AIBind_outer4_nested_dual_blind_oof_train.csv"
+}

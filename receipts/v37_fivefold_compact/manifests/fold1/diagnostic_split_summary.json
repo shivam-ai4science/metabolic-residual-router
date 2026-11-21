@@ -1,0 +1,22 @@
+{
+  "train_rows": 120629,
+  "val_rows": 21288,
+  "train_pos": 60633,
+  "train_neg": 59996,
+  "val_pos": 10700,
+  "val_neg": 10588,
+  "train_unique_drugs": 2369,
+  "val_unique_drugs": 2134,
+  "train_unique_proteins": 40620,
+  "val_unique_proteins": 14972,
+  "train_val_drug_overlap": 2127,
+  "train_val_protein_overlap": 13862,
+  "train_val_pair_overlap": 0,
+  "val_unseen_drug_row_frac": 0.00042277339346110483,
+  "val_unseen_protein_row_frac": 0.08112551672303646,
+  "mode": "random_pair",
+  "source_dir": "../DPI/datasets/metabolic_pathway_phase_2_fold1_strict",
+  "output_dir": "../DPI/datasets/metabolic_pathway_phase_2_fold1_strict_random_pair_split",
+  "val_frac": 0.15,
+  "seed": 1234
+}
